@@ -77,14 +77,14 @@ const DisplayWeather = () => {
         <div className="humidityLevel">
           <WiHumidity className="humidIcon" />
           <div className="humidInfo">
-            <h1>60%</h1>
+            <h1>{currentWeather?.main ? currentWeather.main.humidity : "Loading..."}%</h1>
             <p>Humidity</p>
           </div>
         </div>
         <div className="wind">
           <FaWind className="windIcon" />
           <div className="humidInfo">
-            <h1>2.56 km/h</h1>
+            <h1>{currentWeather?.wind ? currentWeather.wind.speed : "Loading..." }km/h</h1>
             <p>Wind speed</p>
           </div>
         </div>
