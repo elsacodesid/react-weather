@@ -70,7 +70,7 @@ const DisplayWeather = () => {
           <FaCloudShowersHeavy color="blue" />
           <BsCloudHaze color="#B0BEC5" />
         </div>
-        <h1>18°C</h1>
+        <h1>{currentWeather?.main ? currentWeather.main.temp : "Loading..."}°C</h1>
         <h2>{currentWeather?.weather[0] ? currentWeather?.weather[0]?.description : "Loading..."}</h2>
       </div>
       <div className="bottomInfoArea">
